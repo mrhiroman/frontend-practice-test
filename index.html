@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="login-container">
+            <input type="text" placeholder="Login" class="login">
+            <div class="password">
+                <input type="password"id="password-input">
+                <div class="password-eye" onClick="togglePassword()">
+                    <img src="eye.png">
+                </div>
+            </div>
+            <button type="submit" class="login-button">ВОЙТИ</button>
+        </div>
+        <script type="text/javascript">
+            function togglePassword(){
+                let input = document.getElementById("password-input");
+                let state = input.type;
+                if(state == "password"){
+                    input.type = "text";
+                }
+                if(state == "text"){
+                    input.type = "password";
+                }
+            }
+        </script>
+    </body>
+</html>
